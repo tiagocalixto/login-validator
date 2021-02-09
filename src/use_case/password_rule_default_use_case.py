@@ -31,7 +31,7 @@ class PasswordRuleDefaultUseCase(object):
 
     def _format_password(self):
         logging.info(FORMAT_PASSWORD)
-        self.password_payload['password'].strip()
+        self.password_payload['password'] = self.password_payload['password'].strip()
 
     def _validate_password_size(self):
         logging.info(VALIDATING_PASSWORD_SIZE)
