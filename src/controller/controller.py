@@ -1,6 +1,6 @@
 import logging
 from datetime import date
-from data_validator import DataValidator
+from src.controller.data_validator import DataValidator
 from flask import Flask
 from flask import request
 from flask import jsonify
