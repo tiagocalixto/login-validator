@@ -5,7 +5,7 @@ from src.util.constants.constants import *
 from src.entity.password_response import PasswordResponse
 
 
-class PasswordRuleValidatorDefaultUseCase(object):
+class PasswordRuleDefaultUseCase(object):
 
     def __init__(self):
         self.password_payload = None
@@ -24,10 +24,10 @@ class PasswordRuleValidatorDefaultUseCase(object):
             self._validate_password_not_contains_blank_character()
             self._validate_password_not_contains_duplicate_character()
             logging.info(VALIDATION_PASSWORD_DEFAULT_OK)
-            return PasswordResponse.to_dictionary(PasswordResponse(True))
+            return PasswordResponse(True).to_dictionary()
         except PasswordException as e:
             logging.error(e.message)
-            return PasswordResponse.to_dictionary(PasswordResponse(False))
+            return PasswordResponse(False).to_dictionary()
 
     def _format_password(self):
         logging.info(FORMAT_PASSWORD)

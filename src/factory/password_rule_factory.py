@@ -1,6 +1,6 @@
 import logging
 from src.util.constants.constants import *
-from src.use_case.password_rule_validator_default_use_case import PasswordRuleValidatorDefaultUseCase
+from src.use_case.password_rule_default_use_case import PasswordRuleDefaultUseCase
 
 
 class PasswordRuleFactory(object):
@@ -12,4 +12,4 @@ class PasswordRuleFactory(object):
          mais validadores podem ser incluídos """
 
         logging.info(FACTORY_PASSWORD_RULE_DEFAULT)
-        return PasswordRuleValidatorDefaultUseCase()
+        return PasswordRuleDefaultUseCase()

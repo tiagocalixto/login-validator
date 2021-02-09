@@ -26,9 +26,8 @@ def validate_password():
     logging.info('client = ' + str(client))
 
     password_rule_use_case = PasswordRuleFactory.get_password_rule_class_by_client(client)
-    password_validator_use_case = ValidatePasswordUseCase(password.to_dictionary(),
-                                                          password_rule_use_case)
-    response = password_validator_use_case.execute()
+    password_validator_use_case = ValidatePasswordUseCase(password_rule_use_case)
+    response = password_validator_use_case.execute(password.to_dictionary())
     logging.info('response = ' + str(response))
 
     logging.info(END_PASSWORD_VALIDATOR_CONTROLLER)
