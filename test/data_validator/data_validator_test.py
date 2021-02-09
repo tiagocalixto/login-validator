@@ -6,7 +6,7 @@ from src.controller.data_validator import DataValidator
 class PasswordRuleValidatorDefaultUseCaseTest(unittest.TestCase):
 
     def test__given__payload_without_password_field__when__validate_payload__then__raise_bad_request(self):
-        payload = {'test': 'test_1', 'other': 'test_2'}
+        payload = {'no-password-field': 'test_1', 'no-password-field-two': 'test_2'}
         data_validator = DataValidator()
         self.assertRaises(BadRequest, data_validator.validate_password_payload, payload)
 
