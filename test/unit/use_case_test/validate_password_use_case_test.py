@@ -19,7 +19,7 @@ class ValidatePasswordUseCaseTest(unittest.TestCase):
         password_rule_mock.execute.assert_any_call(payload)
 
     @patch('src.use_case.password_rule_default_use_case.PasswordRuleDefaultUseCase')
-    def test__given__valid_password_and_validator_default_class__when__validate_password__then__return_false(
+    def test__given__valid_password_and_validator_default_class__when__validate_password__then__return_true(
             self, password_rule_mock):
 
         validate = ValidatePasswordUseCase(password_rule_mock)
