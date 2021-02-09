@@ -44,5 +44,8 @@ Após abrir o projeto, executar os comandos abaixo no terminal da própria IDE:
 ### Executar o Projeto Local
 - 'python -m flask run'
 
-### Executar Testes Unitários Local
+### Executar Testes Local
 - 'pytest -rp'
+
+### Postman Collection
+Para facilitar nos testes funcionais, o arquivo login-validator.postman_collection.json foi incluido no projeto, se trata de uma collection postman com alguns cenários pré definidos.
