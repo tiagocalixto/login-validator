@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "821b8ea8-2279-4ebd-886e-7a4edd5172f8",
+		"name": "login-validator",
+		"description": "collection to test login-validator app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "valid_password_return_200",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "client",
+						"value": "tiago",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\" : \"V@lidP4$s#\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/validate-password",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"validate-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "invalid_password_return_200",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "client",
+						"type": "text",
+						"value": "tiago"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\" : \"invalidPass\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/validate-password",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"validate-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "null_password_return_400",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "client",
+						"type": "text",
+						"value": "tiago"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\" : \"invalidPass\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/validate-password",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"validate-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "no_password__field_return_400",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "client",
+						"type": "text",
+						"value": "tiago"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\" : \"invalidPass\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/validate-password",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"validate-password"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
